@@ -1,0 +1,2 @@
+# Normalize all text files to LF to keep shell scripts portable
+* text=auto eol=lf
