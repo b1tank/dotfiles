@@ -15,7 +15,7 @@ if has('termguicolors') && ($COLORTERM ==# 'truecolor' || $COLORTERM ==# '24bit'
   set termguicolors
 endif
 set background=dark
-colorscheme retrobox            " richer built-in scheme (gruvbox-like)
+colorscheme sorbet              " dark, vivid built-in scheme
 set guifont=Menlo:h14           " GUI font (MacVim/gVim only)
 set number                      " line numbers
 set ruler                       " cursor position in status line
