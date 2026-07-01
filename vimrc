@@ -9,7 +9,11 @@ set confirm                     " prompt to save instead of failing on :q
 set mouse=a                     " enable mouse in all modes
 
 "====================== Appearance ======================
-colorscheme desert
+if has('termguicolors')
+  set termguicolors             " 24-bit true color
+endif
+set background=dark
+colorscheme retrobox            " richer built-in scheme (gruvbox-like)
 set guifont=Menlo:h14           " GUI font (MacVim/gVim only)
 set number                      " line numbers
 set ruler                       " cursor position in status line

@@ -24,6 +24,10 @@ link() {
 
 link vimrc "$HOME/.vimrc"
 
+# Vim: extra after/syntax files
+mkdir -p "$HOME/.vim/after/syntax"
+link vim/after/syntax/c.vim "$HOME/.vim/after/syntax/c.vim"
+
 # Ensure Vim's persistent-undo directory exists
 mkdir -p "$HOME/.vim/undodir"
 
