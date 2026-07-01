@@ -15,7 +15,12 @@ if has('termguicolors') && ($COLORTERM ==# 'truecolor' || $COLORTERM ==# '24bit'
   set termguicolors
 endif
 set background=dark
-colorscheme sorbet              " dark, vivid built-in scheme
+" 'sorbet' ships with Vim 9.1+; fall back gracefully on older Vims.
+if !empty(globpath(&runtimepath, 'colors/sorbet.vim'))
+  colorscheme sorbet            " dark, vivid built-in scheme (Vim 9.1+)
+else
+  silent! colorscheme torte     " dark fallback for older Vim
+endif
 set guifont=Menlo:h14           " GUI font (MacVim/gVim only)
 set number                      " line numbers
 set ruler                       " cursor position in status line
