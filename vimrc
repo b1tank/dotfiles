@@ -9,8 +9,10 @@ set confirm                     " prompt to save instead of failing on :q
 set mouse=a                     " enable mouse in all modes
 
 "====================== Appearance ======================
-if has('termguicolors')
-  set termguicolors             " 24-bit true color
+" Enable 24-bit color only when the terminal really supports it; otherwise
+" fall back to 256-color mode (avoids grayscale in e.g. macOS Terminal.app).
+if has('termguicolors') && ($COLORTERM ==# 'truecolor' || $COLORTERM ==# '24bit')
+  set termguicolors
 endif
 set background=dark
 colorscheme retrobox            " richer built-in scheme (gruvbox-like)
