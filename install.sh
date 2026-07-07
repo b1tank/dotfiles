@@ -22,6 +22,8 @@ link() {
   echo "Linked $dest -> $src"
 }
 
+link bashrc "$HOME/.bashrc"
+link bash_profile "$HOME/.bash_profile"
 link vimrc "$HOME/.vimrc"
 
 # Vim: extra after/syntax files

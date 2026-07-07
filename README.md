@@ -6,6 +6,8 @@ Personal configuration files for a fresh machine setup.
 
 | File    | Symlinked to | Description                        |
 | ------- | ------------ | --------------------------------- |
+| `bashrc` | `~/.bashrc` | Interactive bash config (prompt, colors, PATH, nvm) |
+| `bash_profile` | `~/.bash_profile` | Login-shell stub that sources `~/.bashrc` |
 | `vimrc` | `~/.vimrc`   | Vim configuration (C dev–oriented) |
 | `vim/after/syntax/c.vim` | `~/.vim/after/syntax/c.vim` | Extra C highlighting (function names) |
 
